@@ -30,7 +30,7 @@ class AddNewBug extends Component {
             </p>
             <div className="control is-grouped">
               <p className="control">
-                <button className="button is-warning" onClick={this.handleSubmit}>Submit</button>
+                <button className="button is-warning" onClick={this.saveBug}>Submit</button>
               </p>
             </div>
           </form>
@@ -39,7 +39,7 @@ class AddNewBug extends Component {
     )
   }
 
-  handleSubmit (e) {
+  saveBug (e) {
     e.preventDefault()
     const bug = {
       id: new Chance().guid(),
@@ -61,7 +61,6 @@ class AddNewBug extends Component {
     fetchBugs()
 
   }
-
 }
 export default AddNewBug
 
